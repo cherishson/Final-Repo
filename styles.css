@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  transition: 0.3s;
+}
+
+.dark {
+  background: #121212;
+  color: #fff;
+}
+
+.container {
+  display: none;
+  padding: 20px;
+}
+
+.active {
+  display: block;
+}
+
+/* Auth */
+.auth-box {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.dark .auth-box {
+  background: #1e1e1e;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.google {
+  background: #db4437;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #007bff;
+  padding: 10px;
+}
+
+.nav button {
+  flex: 1;
+  background: white;
+  color: black;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.dark .card {
+  background: #1f1f1f;
+}
+
+/* Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media(max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Quiz */
+.question {
+  margin: 10px 0;
+}
+
+.streak {
+  font-size: 20px;
+  color: orange;
+}

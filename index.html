@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Pro Learn Platform</title>
+</head>
+<body>
+  <nav>
+    <h2>🎓 StudySync</h2>
+  </nav>
+
+<!-- SIGN UP -->
+<div id="signupPage" class="container active">
+  <div class="auth-box">
+    <h2>Create Account</h2>
+    <input type="text" id="signupUser" placeholder="Username">
+    <input type="password" id="signupPass" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <button class="google">G Sign Up with Google</button>
+    <p style="cursor:pointer;" onclick="showPage('loginPage')">
+      Already have an account? Login
+    </p>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginPage" class="container">
+  <div class="auth-box">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p style="cursor:pointer;" onclick="showPage('signupPage')">
+      Create account
+    </p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboardPage" class="container">
+
+  <div class="nav">
+    <button onclick="showSection('home')">Dashboard</button>
+    <button onclick="showSection('lessons')">Lessons</button>
+    <button onclick="showSection('videos')">Videos</button>
+    <button onclick="showSection('quiz')">Quiz</button>
+    <button onclick="showSection('cert')">Get Certified</button>
+    <button onclick="showSection('plans')">Plans</button>
+    <button onclick="logout()">Logout</button>
+    <button onclick="toggleDark()">Dark Mode</button>
+  </div>
+
+  <!-- HOME -->
+  <div id="home" class="section">
+    <h2>Welcome, <span id="userName"></span> 🔥</h2>
+
+    <div class="card">
+      <h3>Personalize Experience</h3>
+      <input type="text" id="course" placeholder="Programming Course">
+      <select id="level">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+      <button onclick="saveProfile()">Save</button>
+
+      <p id="profileInfo"></p>
+      <p class="streak">🔥 Streak: <span id="streak">0</span></p>
+    </div>
+  </div>
+
+  <!-- LESSONS -->
+  <div id="lessons" class="section" style="display:none;">
+    <h2>Lessons</h2>
+    <div class="grid">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Python</div>
+      <div class="card">Java</div>
+      <div class="card">C++</div>
+      <div class="card">PHP</div>
+      <div class="card">C#</div>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div id="videos" class="section" style="display:none;">
+    <h2>Videos</h2>
+    <div class="card">🎥 Video Lessons Coming Soon</div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="section" style="display:none;">
+    <h2>Quiz</h2>
+    <div id="quizContainer"></div>
+    <button onclick="submitQuiz()">Submit</button>
+  </div>
+
+  <!-- CERT -->
+  <div id="cert" class="section" style="display:none;">
+    <h2>Certification</h2>
+    <div class="card">Complete quizzes to get certified 🎓</div>
+  </div>
+
+  <!-- PLANS -->
+  <div id="plans" class="section" style="display:none;">
+    <h2>Plans</h2>
+    <div class="card">Free Plan</div>
+    <div class="card">Premium Plan - Unlock all features</div>
+    <button onclick="pay()">Pay Now</button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
